@@ -1,0 +1,22 @@
+//
+//  Extensions.swift
+//  TinderClone
+//
+//  Created by Gan Tu on 9/4/23.
+//
+
+import SwiftUI
+
+extension View {
+    @ViewBuilder
+    func `if`<Transform: View>(
+        _ condition: Bool,
+        transform: (Self) -> Transform
+    ) -> some View {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
+    }
+}

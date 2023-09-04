@@ -11,6 +11,10 @@
 		59D2B3832AA69289006551AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3822AA69289006551AA /* ContentView.swift */; };
 		59D2B3852AA6928C006551AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59D2B3842AA6928C006551AA /* Assets.xcassets */; };
 		59D2B3882AA6928C006551AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59D2B3872AA6928C006551AA /* Preview Assets.xcassets */; };
+		59D2B38F2AA693AE006551AA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B38E2AA693AE006551AA /* MainView.swift */; };
+		59D2B3912AA6951B006551AA /* TabBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3902AA6951B006551AA /* TabBarButtonView.swift */; };
+		59D2B3942AA696E8006551AA /* AppStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3932AA696E8006551AA /* AppStateManager.swift */; };
+		59D2B3962AA69821006551AA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3952AA69821006551AA /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		59D2B3822AA69289006551AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		59D2B3842AA6928C006551AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59D2B3872AA6928C006551AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		59D2B38E2AA693AE006551AA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		59D2B3902AA6951B006551AA /* TabBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButtonView.swift; sourceTree = "<group>"; };
+		59D2B3932AA696E8006551AA /* AppStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateManager.swift; sourceTree = "<group>"; };
+		59D2B3952AA69821006551AA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +60,12 @@
 			isa = PBXGroup;
 			children = (
 				59D2B3802AA69289006551AA /* TinderCloneApp.swift */,
+				59D2B3932AA696E8006551AA /* AppStateManager.swift */,
 				59D2B3822AA69289006551AA /* ContentView.swift */,
+				59D2B3922AA6952B006551AA /* MainTabBar */,
 				59D2B3842AA6928C006551AA /* Assets.xcassets */,
 				59D2B3862AA6928C006551AA /* Preview Content */,
+				59D2B3952AA69821006551AA /* Extensions.swift */,
 			);
 			path = TinderClone;
 			sourceTree = "<group>";
@@ -65,6 +76,15 @@
 				59D2B3872AA6928C006551AA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		59D2B3922AA6952B006551AA /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				59D2B38E2AA693AE006551AA /* MainView.swift */,
+				59D2B3902AA6951B006551AA /* TabBarButtonView.swift */,
+			);
+			path = MainTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59D2B3912AA6951B006551AA /* TabBarButtonView.swift in Sources */,
+				59D2B3962AA69821006551AA /* Extensions.swift in Sources */,
 				59D2B3832AA69289006551AA /* ContentView.swift in Sources */,
+				59D2B38F2AA693AE006551AA /* MainView.swift in Sources */,
 				59D2B3812AA69289006551AA /* TinderCloneApp.swift in Sources */,
+				59D2B3942AA696E8006551AA /* AppStateManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
