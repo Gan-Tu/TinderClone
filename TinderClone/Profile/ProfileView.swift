@@ -135,6 +135,9 @@ struct ProfileView: View {
             .padding(.horizontal, 8)
             
             // MARK: - Promotions
+            ProfileSwipePromo {
+                // TODO
+            }
             
             Spacer()
         }
