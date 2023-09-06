@@ -59,7 +59,7 @@ struct MainView: View {
                 .frame(height: 100)
                 .padding(.top, 30)
                 
-                correctViewForState()
+                correctViewForState().ignoresSafeArea(edges: .vertical)
 
                 Spacer()
             }
