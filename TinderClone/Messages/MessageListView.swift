@@ -12,6 +12,16 @@ struct MessageListView: View {
     @State private var searchText: String = ""
     @State private var isEditing: Bool = false
     
+    func displayPreview(_ preview: MessagePreview) -> Bool {
+        if searchText.isEmpty {
+            return true
+        }
+        if preview.person.name.lowercased().contains(searchText.lowercased()) {
+            return true
+        }
+        return false
+    }
+    
     var body: some View {
         ScrollView {
             HStack {
@@ -33,18 +43,18 @@ struct MessageListView: View {
                     .padding(.horizontal, 10)
                     .padding(.vertical, 10)
                     .onTapGesture {
-                        withAnimation(.easeIn(duration: 0.25)) {
+                        withAnimation(.easeInOut(duration: 0.25)) {
                             self.isEditing = true
                         }
                     }
                 
                 if isEditing {
                     Button(action: {
-                        withAnimation(.easeIn(duration: 0.25)) {
+                        withAnimation(.easeInOut(duration: 0.25)) {
                             hideKeyboard()
                             self.isEditing = false
                             self.searchText = ""
-                        } 
+                        }
                     }, label: {
                         Text("Cancel")
                     })
@@ -53,14 +63,20 @@ struct MessageListView: View {
                 }
             }
             
-            LazyVStack {
-                ForEach(vm.messagePreviews, id: \.self) { preview in
-                    NavigationLink(destination: {
-                        ChatView(person: preview.person)
-                    }, label: {
-                        MessagePreviewView(preview: preview)
-                    })
-                    .buttonStyle(PlainButtonStyle())
+            ZStack {
+                VStack {
+                    ForEach(vm.messagePreviews.filter({displayPreview($0)}), id: \.self) { preview in
+                        NavigationLink(destination: {
+                            ChatView(person: preview.person)
+                        }, label: {
+                            MessagePreviewView(preview: preview)
+                        })
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                }
+                
+                if isEditing && searchText.isEmpty {
+                    Color.white.opacity(0.5)
                 }
             }
             
