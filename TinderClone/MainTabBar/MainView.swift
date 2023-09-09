@@ -20,7 +20,7 @@ struct MainView: View {
             let view = Color.yellow
             return AnyView(view)
         case .message:
-            let view = MessageListView()
+            let view = NavigationView{MessageListView()}
             return AnyView(view)
         case .profile:
             let view = ProfileView()
@@ -56,14 +56,13 @@ struct MainView: View {
 
                     Spacer()
                 }
-                .frame(height: 100)
-                .padding(.top, 30)
+                .frame(minHeight: 50)
                 
                 correctViewForState().ignoresSafeArea(edges: .vertical)
 
                 Spacer()
             }
-            .ignoresSafeArea(edges: .vertical)
+            .ignoresSafeArea(edges: .bottom)
         }
     }
 }

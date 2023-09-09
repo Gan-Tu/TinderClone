@@ -13,7 +13,7 @@ struct MessageListView: View {
     @State private var isEditing: Bool = false
     
     var body: some View {
-        VStack {
+        ScrollView {
             HStack {
                 TextField("Search Matches", text: $searchText)
                     .padding(7)
@@ -31,6 +31,7 @@ struct MessageListView: View {
                         }
                     )
                     .padding(.horizontal, 10)
+                    .padding(.vertical, 10)
                     .onTapGesture {
                         withAnimation(.easeIn(duration: 0.25)) {
                             self.isEditing = true
@@ -52,7 +53,16 @@ struct MessageListView: View {
                 }
             }
             
-            Text("Conersations")
+            LazyVStack {
+                ForEach(vm.messagePreviews, id: \.self) { preview in
+                    NavigationLink(destination: {
+                        ChatView(person: preview.person)
+                    }, label: {
+                        MessagePreviewView(preview: preview)
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                }
+            }
             
             Spacer()
         }
@@ -60,5 +70,7 @@ struct MessageListView: View {
 }
 
 #Preview {
-    MessageListView()
+    NavigationView {
+        MessageListView()
+    }
 }

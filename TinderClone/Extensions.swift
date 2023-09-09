@@ -36,3 +36,9 @@ extension View {
     }
 }
 #endif
+
+struct HideNavigationView: ViewModifier {
+    func body(content: Content) -> some View {
+        content.navigationTitle("").toolbar(.hidden)
+    }
+}

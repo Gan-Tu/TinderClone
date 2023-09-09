@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		591D07BE2AACE0030090AB39 /* TypingBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D07BD2AACE0030090AB39 /* TypingBubbleView.swift */; };
+		591D07C02AACEBB20090AB39 /* MessagePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D07BF2AACEBB20090AB39 /* MessagePreviewView.swift */; };
 		59A444E62AACB47700D3BE82 /* ChatViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A444E52AACB47700D3BE82 /* ChatViewHeader.swift */; };
 		59A444E82AACBFA200D3BE82 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A444E72AACBFA200D3BE82 /* MessageListView.swift */; };
 		59A444EA2AACBFD000D3BE82 /* MessageListViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A444E92AACBFD000D3BE82 /* MessageListViewManager.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		591D07BD2AACE0030090AB39 /* TypingBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingBubbleView.swift; sourceTree = "<group>"; };
+		591D07BF2AACEBB20090AB39 /* MessagePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePreviewView.swift; sourceTree = "<group>"; };
 		59A444E52AACB47700D3BE82 /* ChatViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewHeader.swift; sourceTree = "<group>"; };
 		59A444E72AACBFA200D3BE82 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		59A444E92AACBFD000D3BE82 /* MessageListViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewManager.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				59A444E72AACBFA200D3BE82 /* MessageListView.swift */,
 				59A444E92AACBFD000D3BE82 /* MessageListViewManager.swift */,
 				591D07BD2AACE0030090AB39 /* TypingBubbleView.swift */,
+				591D07BF2AACEBB20090AB39 /* MessagePreviewView.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				59D2B3812AA69289006551AA /* TinderCloneApp.swift in Sources */,
 				59D2B3A42AAC18D8006551AA /* Message.swift in Sources */,
 				59A444EA2AACBFD000D3BE82 /* MessageListViewManager.swift in Sources */,
+				591D07C02AACEBB20090AB39 /* MessagePreviewView.swift in Sources */,
 				59D2B3982AA69B7B006551AA /* ProfileView.swift in Sources */,
 				59D2B3942AA696E8006551AA /* AppStateManager.swift in Sources */,
 				59D2B3A82AACB103006551AA /* MessagePreview.swift in Sources */,

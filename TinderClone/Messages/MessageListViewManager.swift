@@ -16,6 +16,6 @@ class MessageListViewManager: ObservableObject {
     
     private func loadPreviews() {
         // Fake networking to load message previews from a server
-        self.messagePreviews = [MessagePreview.exmaple]
+        self.messagePreviews = MessagePreview.examples
     }
 }

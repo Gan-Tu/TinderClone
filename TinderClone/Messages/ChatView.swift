@@ -97,8 +97,7 @@ struct ChatView: View {
                 .padding(.bottom)
             }
         }
-        .navigationTitle("")
-        .toolbar(.hidden)
+        .modifier(HideNavigationView())
         .onChange(of: chatManager.keyboardIsShowing, perform: { value in
             if value {
                 scrollToBottom()
