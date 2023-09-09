@@ -28,3 +28,11 @@ extension Color {
     static let defaultBackground = Color(.systemGray6).opacity(0.35)
     static let textFieldBackground = Color(.systemGray6)
 }
+
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif

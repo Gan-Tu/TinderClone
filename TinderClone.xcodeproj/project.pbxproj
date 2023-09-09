@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		59A444E62AACB47700D3BE82 /* ChatViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A444E52AACB47700D3BE82 /* ChatViewHeader.swift */; };
+		59A444E82AACBFA200D3BE82 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A444E72AACBFA200D3BE82 /* MessageListView.swift */; };
+		59A444EA2AACBFD000D3BE82 /* MessageListViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A444E92AACBFD000D3BE82 /* MessageListViewManager.swift */; };
 		59D2B3812AA69289006551AA /* TinderCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3802AA69289006551AA /* TinderCloneApp.swift */; };
 		59D2B3832AA69289006551AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3822AA69289006551AA /* ContentView.swift */; };
 		59D2B3852AA6928C006551AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59D2B3842AA6928C006551AA /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		59A444E52AACB47700D3BE82 /* ChatViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewHeader.swift; sourceTree = "<group>"; };
+		59A444E72AACBFA200D3BE82 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
+		59A444E92AACBFD000D3BE82 /* MessageListViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewManager.swift; sourceTree = "<group>"; };
 		59D2B37D2AA69289006551AA /* TinderClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59D2B3802AA69289006551AA /* TinderCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderCloneApp.swift; sourceTree = "<group>"; };
 		59D2B3822AA69289006551AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				59D2B3AC2AACB27B006551AA /* ChatView.swift */,
 				59D2B3AE2AACB2B7006551AA /* ChatManager.swift */,
 				59A444E52AACB47700D3BE82 /* ChatViewHeader.swift */,
+				59A444E72AACBFA200D3BE82 /* MessageListView.swift */,
+				59A444E92AACBFD000D3BE82 /* MessageListViewManager.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -228,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59D2B3AF2AACB2B7006551AA /* ChatManager.swift in Sources */,
+				59A444E82AACBFA200D3BE82 /* MessageListView.swift in Sources */,
 				59D2B3912AA6951B006551AA /* TabBarButtonView.swift in Sources */,
 				59D2B39B2AA69C5A006551AA /* RoundedImage.swift in Sources */,
 				59A444E62AACB47700D3BE82 /* ChatViewHeader.swift in Sources */,
@@ -240,6 +247,7 @@
 				59D2B38F2AA693AE006551AA /* MainView.swift in Sources */,
 				59D2B3812AA69289006551AA /* TinderCloneApp.swift in Sources */,
 				59D2B3A42AAC18D8006551AA /* Message.swift in Sources */,
+				59A444EA2AACBFD000D3BE82 /* MessageListViewManager.swift in Sources */,
 				59D2B3982AA69B7B006551AA /* ProfileView.swift in Sources */,
 				59D2B3942AA696E8006551AA /* AppStateManager.swift in Sources */,
 				59D2B3A82AACB103006551AA /* MessagePreview.swift in Sources */,

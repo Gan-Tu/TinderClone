@@ -20,7 +20,7 @@ struct MainView: View {
             let view = Color.yellow
             return AnyView(view)
         case .message:
-            let view = Text("message")
+            let view = MessageListView()
             return AnyView(view)
         case .profile:
             let view = ProfileView()
