@@ -17,6 +17,12 @@ class ChatManager: ObservableObject {
         loadMessages()
     }
     
+    public func sendMessage(_ message: Message) {
+        // Fake networking
+        messages.append(message)
+    }
+    
+    
     private func loadMessages() {
         // Fake networking right now
         messages = [Message.exampleSent, Message.exampleReceived]

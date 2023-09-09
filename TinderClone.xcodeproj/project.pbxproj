@@ -89,9 +89,9 @@
 				59D2B3A92AACB170006551AA /* Messages */,
 				59D2B3A22AAC18CB006551AA /* Model */,
 				59D2B39F2AA69D27006551AA /* HelperView */,
+				59D2B3952AA69821006551AA /* Extensions.swift */,
 				59D2B3842AA6928C006551AA /* Assets.xcassets */,
 				59D2B3862AA6928C006551AA /* Preview Content */,
-				59D2B3952AA69821006551AA /* Extensions.swift */,
 			);
 			path = TinderClone;
 			sourceTree = "<group>";
