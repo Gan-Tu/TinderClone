@@ -10,6 +10,7 @@ import SwiftUI
 struct ChatView: View {
     @ObservedObject var chatManager: ChatManager
     @State private var typingMessage: String = ""
+    @State private var scrollProxy: ScrollViewProxy? = nil
     
     private var person: Person
     
@@ -25,6 +26,12 @@ struct ChatView: View {
         }
     }
     
+    func scrollToBottom() {
+        withAnimation {
+            scrollProxy?.scrollTo(chatManager.messages.count - 1, anchor: .bottom)
+        }
+    }
+    
     var body: some View {
         VStack  {
             ChatViewHeader(name: person.name, imageURL: person.imageURLS.first) {
@@ -35,10 +42,16 @@ struct ChatView: View {
             
             VStack {
                 ScrollView(.vertical, showsIndicators: false) {
-                    LazyVStack {
-                        ForEach(chatManager.messages.indices, id: \.self) { index in
-                            MessageView(message: chatManager.messages[index])
+                    ScrollViewReader { proxy in
+                        LazyVStack {
+                            ForEach(chatManager.messages.indices, id: \.self) { index in
+                                MessageView(message: chatManager.messages[index])
+                                    .id(index)
+                            }
                         }
+                        .onAppear(perform: {
+                            scrollProxy = proxy
+                        })
                     }
                 }
                 
@@ -71,6 +84,14 @@ struct ChatView: View {
         }
         .navigationTitle("")
         .toolbar(.hidden)
+        .onChange(of: chatManager.keyboardIsShowing, perform: { value in
+            if value {
+                scrollToBottom()
+            }
+        })
+        .onChange(of: chatManager.messages, perform: { _ in
+            scrollToBottom()
+        })
     }
 }
 
