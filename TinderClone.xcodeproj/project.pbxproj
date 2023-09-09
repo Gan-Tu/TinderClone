@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591D07BE2AACE0030090AB39 /* TypingBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D07BD2AACE0030090AB39 /* TypingBubbleView.swift */; };
 		59A444E62AACB47700D3BE82 /* ChatViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A444E52AACB47700D3BE82 /* ChatViewHeader.swift */; };
 		59A444E82AACBFA200D3BE82 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A444E72AACBFA200D3BE82 /* MessageListView.swift */; };
 		59A444EA2AACBFD000D3BE82 /* MessageListViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A444E92AACBFD000D3BE82 /* MessageListViewManager.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		591D07BD2AACE0030090AB39 /* TypingBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingBubbleView.swift; sourceTree = "<group>"; };
 		59A444E52AACB47700D3BE82 /* ChatViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewHeader.swift; sourceTree = "<group>"; };
 		59A444E72AACBFA200D3BE82 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		59A444E92AACBFD000D3BE82 /* MessageListViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewManager.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				59A444E52AACB47700D3BE82 /* ChatViewHeader.swift */,
 				59A444E72AACBFA200D3BE82 /* MessageListView.swift */,
 				59A444E92AACBFD000D3BE82 /* MessageListViewManager.swift */,
+				591D07BD2AACE0030090AB39 /* TypingBubbleView.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				59D2B3962AA69821006551AA /* Extensions.swift in Sources */,
 				59D2B3832AA69289006551AA /* ContentView.swift in Sources */,
 				59D2B3AD2AACB27B006551AA /* ChatView.swift in Sources */,
+				591D07BE2AACE0030090AB39 /* TypingBubbleView.swift in Sources */,
 				59D2B3A62AAC1929006551AA /* Person.swift in Sources */,
 				59D2B3AB2AACB17D006551AA /* MessageView.swift in Sources */,
 				59D2B3A12AA6A15A006551AA /* ProfileSwipePromo.swift in Sources */,

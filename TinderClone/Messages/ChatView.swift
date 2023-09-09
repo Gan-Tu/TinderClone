@@ -11,6 +11,7 @@ struct ChatView: View {
     @ObservedObject var chatManager: ChatManager
     @State private var typingMessage: String = ""
     @State private var scrollProxy: ScrollViewProxy? = nil
+    @State private var showTypingBubble: Bool = false
     
     private var person: Person
     
@@ -20,9 +21,12 @@ struct ChatView: View {
     }
     
     func sendMessage() {
-        withAnimation(.easeIn) {
-            chatManager.sendMessage(Message(content: typingMessage))
+        let msg = typingMessage
+        withAnimation(.easeOut) {
             typingMessage = ""
+        }
+        withAnimation(.easeIn.delay(0.4)) {
+            chatManager.sendMessage(Message(content: msg))
         }
     }
     
@@ -48,6 +52,9 @@ struct ChatView: View {
                                 MessageView(message: chatManager.messages[index])
                                     .id(index)
                             }
+                            if showTypingBubble {
+                                TypingBubbleView(fromCurrentUser: true)
+                            }
                         }
                         .onAppear(perform: {
                             scrollProxy = proxy
@@ -63,6 +70,11 @@ struct ChatView: View {
                         .textFieldStyle(PlainTextFieldStyle())
                         .frame(height: 45)
                         .padding(.horizontal)
+                        .onChange(of: typingMessage, perform: { value in
+                            withAnimation(.easeInOut(duration: 0.5)) {
+                                showTypingBubble = !value.isEmpty
+                            }
+                        })
                     
                     Button(action: {
                         sendMessage()
