@@ -151,10 +151,10 @@
 		59D2B3A92AACB170006551AA /* Messages */ = {
 			isa = PBXGroup;
 			children = (
-				59D2B3AA2AACB17D006551AA /* MessageView.swift */,
 				59D2B3AC2AACB27B006551AA /* ChatView.swift */,
 				59D2B3AE2AACB2B7006551AA /* ChatManager.swift */,
 				59A444E52AACB47700D3BE82 /* ChatViewHeader.swift */,
+				59D2B3AA2AACB17D006551AA /* MessageView.swift */,
 				59A444E72AACBFA200D3BE82 /* MessageListView.swift */,
 				59A444E92AACBFD000D3BE82 /* MessageListViewManager.swift */,
 				591D07BD2AACE0030090AB39 /* TypingBubbleView.swift */,

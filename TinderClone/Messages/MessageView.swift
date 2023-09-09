@@ -18,8 +18,11 @@ struct MessageView: View {
             
             Text(message.content)
                 .padding(10)
-                .foregroundStyle(Color.white)
-                .background(message.fromCurrentUser ? Color.blue : Color.gray)
+                .foregroundStyle(
+                    message.fromCurrentUser ? Color.white : Color.black)
+                .background(
+                    message.fromCurrentUser ? Color.blue : Color.gray.opacity(0.2))
+                .multilineTextAlignment(.leading)
                 .cornerRadius(10)
             
             if !message.fromCurrentUser {
@@ -34,5 +37,7 @@ struct MessageView: View {
     VStack {
         MessageView(message: Message.exampleReceived)
         MessageView(message: Message.exampleSent)
+        MessageView(message: Message.exampleReceivedLong)
+        MessageView(message: Message.exampleSentLong)
     }
 }
