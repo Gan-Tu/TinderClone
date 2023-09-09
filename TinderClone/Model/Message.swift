@@ -9,14 +9,10 @@ import Foundation
 
 struct Message: Hashable {
     var content: String
-    var person: Person? = nil
-    
-    var fromCurrentUser: Bool {
-        return person == nil
-    }
+    var fromCurrentUser: Bool = false
 }
 
 extension Message {
-    static let exampleSent = Message(content: "Hello there")
-    static let exampleReceived = Message(content: "Hello there", person: Person.example)
+    static let exampleSent = Message(content: "Hello there", fromCurrentUser: true)
+    static let exampleReceived = Message(content: "Hello there", fromCurrentUser: false)
 }

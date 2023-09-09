@@ -27,7 +27,7 @@ struct ChatView: View {
             typingMessage = ""
         }
         withAnimation(.easeIn.delay(0.4)) {
-            chatManager.sendMessage(Message(content: msg))
+            chatManager.sendMessage(Message(content: msg, fromCurrentUser: true))
         }
     }
     

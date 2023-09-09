@@ -47,6 +47,10 @@ class ChatManager: ObservableObject {
     
     private func loadMessages() {
         // Fake networking right now
-        messages = [Message.exampleSent, Message.exampleReceived]
+        if person.conversations.isEmpty {
+            messages = [Message.exampleSent, Message.exampleReceived]
+        } else {
+            messages = person.conversations
+        }
     }
 }

@@ -44,7 +44,7 @@ struct MessageListView: View {
                             hideKeyboard()
                             self.isEditing = false
                             self.searchText = ""
-                        }
+                        } 
                     }, label: {
                         Text("Cancel")
                     })
