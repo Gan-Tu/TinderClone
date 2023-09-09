@@ -12,7 +12,7 @@ struct ProfileView: View {
         VStack(spacing: 0) {
             // MARK: - Profile
             ZStack(alignment: .topTrailing) {
-                RoundedImage(url: URL(string: "https://picsum.photos/400"))
+                RoundedImage(url: URL(string: "https://i.pravatar.cc/400?img=58"))
                     .frame(height: 200)
                 
                 Button(action: {

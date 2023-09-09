@@ -19,6 +19,11 @@
 		59D2B39B2AA69C5A006551AA /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B39A2AA69C5A006551AA /* RoundedImage.swift */; };
 		59D2B39E2AA69CA7006551AA /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 59D2B39D2AA69CA7006551AA /* KingfisherSwiftUI */; };
 		59D2B3A12AA6A15A006551AA /* ProfileSwipePromo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3A02AA6A15A006551AA /* ProfileSwipePromo.swift */; };
+		59D2B3A42AAC18D8006551AA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3A32AAC18D8006551AA /* Message.swift */; };
+		59D2B3A62AAC1929006551AA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3A52AAC1929006551AA /* Person.swift */; };
+		59D2B3A82AACB103006551AA /* MessagePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3A72AACB103006551AA /* MessagePreview.swift */; };
+		59D2B3AB2AACB17D006551AA /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3AA2AACB17D006551AA /* MessageView.swift */; };
+		59D2B3AD2AACB27B006551AA /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3AC2AACB27B006551AA /* ChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		59D2B3972AA69B7B006551AA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		59D2B39A2AA69C5A006551AA /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		59D2B3A02AA6A15A006551AA /* ProfileSwipePromo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwipePromo.swift; sourceTree = "<group>"; };
+		59D2B3A32AAC18D8006551AA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		59D2B3A52AAC1929006551AA /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		59D2B3A72AACB103006551AA /* MessagePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePreview.swift; sourceTree = "<group>"; };
+		59D2B3AA2AACB17D006551AA /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		59D2B3AC2AACB27B006551AA /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,8 @@
 				59D2B3822AA69289006551AA /* ContentView.swift */,
 				59D2B3922AA6952B006551AA /* MainTabBar */,
 				59D2B3992AA69B83006551AA /* Profile */,
+				59D2B3A92AACB170006551AA /* Messages */,
+				59D2B3A22AAC18CB006551AA /* Model */,
 				59D2B39F2AA69D27006551AA /* HelperView */,
 				59D2B3842AA6928C006551AA /* Assets.xcassets */,
 				59D2B3862AA6928C006551AA /* Preview Content */,
@@ -112,6 +124,25 @@
 				59D2B39A2AA69C5A006551AA /* RoundedImage.swift */,
 			);
 			path = HelperView;
+			sourceTree = "<group>";
+		};
+		59D2B3A22AAC18CB006551AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59D2B3A32AAC18D8006551AA /* Message.swift */,
+				59D2B3A52AAC1929006551AA /* Person.swift */,
+				59D2B3A72AACB103006551AA /* MessagePreview.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		59D2B3A92AACB170006551AA /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				59D2B3AA2AACB17D006551AA /* MessageView.swift */,
+				59D2B3AC2AACB27B006551AA /* ChatView.swift */,
+			);
+			path = Messages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +225,16 @@
 				59D2B39B2AA69C5A006551AA /* RoundedImage.swift in Sources */,
 				59D2B3962AA69821006551AA /* Extensions.swift in Sources */,
 				59D2B3832AA69289006551AA /* ContentView.swift in Sources */,
+				59D2B3AD2AACB27B006551AA /* ChatView.swift in Sources */,
+				59D2B3A62AAC1929006551AA /* Person.swift in Sources */,
+				59D2B3AB2AACB17D006551AA /* MessageView.swift in Sources */,
 				59D2B3A12AA6A15A006551AA /* ProfileSwipePromo.swift in Sources */,
 				59D2B38F2AA693AE006551AA /* MainView.swift in Sources */,
 				59D2B3812AA69289006551AA /* TinderCloneApp.swift in Sources */,
+				59D2B3A42AAC18D8006551AA /* Message.swift in Sources */,
 				59D2B3982AA69B7B006551AA /* ProfileView.swift in Sources */,
 				59D2B3942AA696E8006551AA /* AppStateManager.swift in Sources */,
+				59D2B3A82AACB103006551AA /* MessagePreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
