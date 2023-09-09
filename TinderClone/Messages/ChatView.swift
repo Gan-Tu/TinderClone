@@ -12,6 +12,7 @@ struct ChatView: View {
     @State private var typingMessage: String = ""
     @State private var scrollProxy: ScrollViewProxy? = nil
     @State private var showTypingBubble: Bool = false
+    private let kTypingBubbleId: Int = -1
     
     private var person: Person
     
@@ -32,7 +33,7 @@ struct ChatView: View {
     
     func scrollToBottom() {
         withAnimation {
-            scrollProxy?.scrollTo(chatManager.messages.count - 1, anchor: .bottom)
+            scrollProxy?.scrollTo(showTypingBubble ? kTypingBubbleId : chatManager.messages.count - 1, anchor: .bottom)
         }
     }
     
@@ -54,6 +55,7 @@ struct ChatView: View {
                             }
                             if showTypingBubble {
                                 TypingBubbleView(fromCurrentUser: true)
+                                    .id(kTypingBubbleId)
                             }
                         }
                         .onAppear(perform: {
@@ -71,8 +73,9 @@ struct ChatView: View {
                         .frame(height: 45)
                         .padding(.horizontal)
                         .onChange(of: typingMessage, perform: { value in
-                            withAnimation(.easeInOut(duration: 0.5)) {
+                            withAnimation(.easeInOut) {
                                 showTypingBubble = !value.isEmpty
+                                scrollToBottom()
                             }
                         })
                     
