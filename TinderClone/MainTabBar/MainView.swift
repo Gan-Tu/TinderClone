@@ -20,7 +20,7 @@ struct MainView: View {
             let view = Color.yellow
             return AnyView(view)
         case .message:
-            let view = NavigationView{MessageListView()}
+            let view = MessageListView()
             return AnyView(view)
         case .profile:
             let view = ProfileView()
@@ -29,41 +29,44 @@ struct MainView: View {
     }
     
     var body: some View {
-        ZStack {
-            // MARK: - Background
-            Color(.systemGray6)
-                .opacity(0.35)
-                .ignoresSafeArea(.all)
-            
-            // MARK: - TabBar
-            VStack {
-                HStack {
-                    Spacer()
+        NavigationView {
+            ZStack {
+                // MARK: - Background
+                Color(.systemGray6)
+                    .opacity(0.35)
+                    .ignoresSafeArea(.all)
+                
+                // MARK: - TabBar
+                VStack {
+                    HStack {
+                        Spacer()
 
-                    TabBarButtonView(buttonType: .fire)
-                    
-                    Spacer()
-                    
-                    TabBarButtonView(buttonType: .star)
+                        TabBarButtonView(buttonType: .fire)
+                        
+                        Spacer()
+                        
+                        TabBarButtonView(buttonType: .star)
 
-                    Spacer()
-                    
-                    TabBarButtonView(buttonType: .message)
+                        Spacer()
+                        
+                        TabBarButtonView(buttonType: .message)
 
-                    Spacer()
+                        Spacer()
+                        
+                        TabBarButtonView(buttonType: .profile)
+
+                        Spacer()
+                    }
+                    .frame(minHeight: 50)
                     
-                    TabBarButtonView(buttonType: .profile)
+                    correctViewForState().ignoresSafeArea(edges: .vertical)
 
                     Spacer()
                 }
-                .frame(minHeight: 50)
-                
-                correctViewForState().ignoresSafeArea(edges: .vertical)
-
-                Spacer()
+                .ignoresSafeArea(edges: .bottom)
             }
-            .ignoresSafeArea(edges: .bottom)
         }
+        .modifier(HideNavigationView())
     }
 }
 
