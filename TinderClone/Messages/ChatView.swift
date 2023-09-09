@@ -8,11 +8,26 @@
 import SwiftUI
 
 struct ChatView: View {
+    @ObservedObject var chatManager: ChatManager
+    
+    private var person: Person
+    
+    init(person: Person) {
+        self.person = person
+        self.chatManager = ChatManager(person: person)
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.vertical, showsIndicators: false) {
+            LazyVStack {
+                ForEach(chatManager.messages.indices, id: \.self) { index in
+                    MessageView(message: chatManager.messages[index])
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    ChatView()
+    ChatView(person: Person.example)
 }

@@ -24,6 +24,7 @@
 		59D2B3A82AACB103006551AA /* MessagePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3A72AACB103006551AA /* MessagePreview.swift */; };
 		59D2B3AB2AACB17D006551AA /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3AA2AACB17D006551AA /* MessageView.swift */; };
 		59D2B3AD2AACB27B006551AA /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3AC2AACB27B006551AA /* ChatView.swift */; };
+		59D2B3AF2AACB2B7006551AA /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B3AE2AACB2B7006551AA /* ChatManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		59D2B3A72AACB103006551AA /* MessagePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePreview.swift; sourceTree = "<group>"; };
 		59D2B3AA2AACB17D006551AA /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		59D2B3AC2AACB27B006551AA /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		59D2B3AE2AACB2B7006551AA /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				59D2B3AA2AACB17D006551AA /* MessageView.swift */,
 				59D2B3AC2AACB27B006551AA /* ChatView.swift */,
+				59D2B3AE2AACB2B7006551AA /* ChatManager.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59D2B3AF2AACB2B7006551AA /* ChatManager.swift in Sources */,
 				59D2B3912AA6951B006551AA /* TabBarButtonView.swift in Sources */,
 				59D2B39B2AA69C5A006551AA /* RoundedImage.swift in Sources */,
 				59D2B3962AA69821006551AA /* Extensions.swift in Sources */,
