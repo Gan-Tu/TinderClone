@@ -17,7 +17,7 @@ struct MainView: View {
             let view = Color.red
             return AnyView(view)
         case .star:
-            let view = Color.yellow
+            let view = MatchesView()
             return AnyView(view)
         case .message:
             let view = MessageListView()
