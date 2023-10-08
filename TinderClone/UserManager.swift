@@ -8,9 +8,13 @@
 import Foundation
 
 class UserManager: ObservableObject {
-    @Published var currentUser: User = User(name: "")
+    @Published var currentUser: User = User(name: "", imageURLS: [], bio: "", age: 0)
     @Published var matches: [Person] = []
     @Published var topPicks: [Person] = []
+    
+    var user: User {
+        return currentUser
+    }
     
     init() {
         loadUser()
@@ -31,6 +35,6 @@ class UserManager: ObservableObject {
     
     private func loadTopPicks() {
         // Mock networking here
-        self.topPicks = Person.randomExamples(5)
+        self.topPicks = Person.randomExamples(4)
     }
 }

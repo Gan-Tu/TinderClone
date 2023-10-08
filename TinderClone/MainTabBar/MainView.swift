@@ -73,4 +73,5 @@ struct MainView: View {
 #Preview {
     MainView()
         .environmentObject(AppStateManager())
+        .environmentObject(UserManager())
 }

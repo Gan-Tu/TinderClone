@@ -12,8 +12,9 @@ struct LikesView: View {
     @EnvironmentObject var userManager: UserManager
     
     private var user: User {
-        return userManager.currentUser
+        userManager.currentUser
     }
+    
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false, content: {

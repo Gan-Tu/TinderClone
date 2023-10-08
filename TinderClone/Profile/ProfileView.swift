@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var userManager: UserManager
+    @EnvironmentObject var appState: AppStateManager
+    
+    private var user: User {
+        userManager.currentUser
+    }
+    
     var body: some View {
         VStack(spacing: 0) {
             // MARK: - Profile
             ZStack(alignment: .topTrailing) {
-                RoundedImage(url: URL(string: "https://i.pravatar.cc/400?img=58"))
+                RoundedImage(url: user.imageURLS.first)
                     .frame(height: 200)
                 
                 Button(action: {
@@ -33,14 +40,14 @@ struct ProfileView: View {
             Spacer().frame(height: 18)
             
             // MARK: - Name
-            Text("Gan, 26")
+            Text("\(user.name), \(user.age)")
                 .foregroundStyle(Color.textTitle)
                 .font(.system(size: 26, weight: .medium))
             
             Spacer().frame(height: 8)
             
             // MARK: - Title
-            Text("Software Engineer")
+            Text(user.bio)
             
             Spacer().frame(height: 22)
             
@@ -135,8 +142,14 @@ struct ProfileView: View {
             .padding(.horizontal, 8)
             
             // MARK: - Promotions
-            ProfileSwipePromo {
-                // TODO
+            if !user.goldSubscriber {
+                ZStack {
+                    Color.gray.opacity(0.05)
+                    ProfileSwipePromo {
+                        appState.showPurchaseScreen()
+                    }
+                }
+                .padding(.top, 18)
             }
             
             Spacer()
@@ -147,4 +160,6 @@ struct ProfileView: View {
 #Preview {
     ProfileView()
         .background(Color.defaultBackground)
+        .environmentObject(UserManager())
+        .environmentObject(AppStateManager())
 }
