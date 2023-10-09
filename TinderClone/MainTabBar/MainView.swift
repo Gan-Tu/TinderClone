@@ -40,30 +40,37 @@ struct MainView: View {
                 VStack {
                     HStack {
                         Spacer()
-
+                        
                         TabBarButtonView(buttonType: .fire)
                         
                         Spacer()
                         
                         TabBarButtonView(buttonType: .star)
-
+                        
                         Spacer()
                         
                         TabBarButtonView(buttonType: .message)
-
+                        
                         Spacer()
                         
                         TabBarButtonView(buttonType: .profile)
-
+                        
                         Spacer()
                     }
                     .frame(minHeight: 50)
                     
                     correctViewForState().ignoresSafeArea(edges: .vertical)
-
+                    
                     Spacer()
                 }
                 .ignoresSafeArea(edges: .bottom)
+                
+                if appState.showPurchasePopup {
+                    PurchasePopup(isVisible: $appState.showPurchasePopup)
+                        .animation(.interactiveSpring(response: 0.3, dampingFraction: 0.75, blendDuration: 0.5))
+                        .transition(.offset(y: 1000))
+                        .zIndex(1)
+                }
             }
         }
         .modifier(HideNavigationView())
