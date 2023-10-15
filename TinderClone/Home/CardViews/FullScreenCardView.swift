@@ -29,6 +29,8 @@ struct FullScreenCardView: View {
             
             ScrollView(showsIndicators: false, content: {
                 VStack(spacing: 0) {
+                    Spacer()
+ 
                     CardImageScroller(person: person, fullScreenMode: $fullScreenMode)
                         .frame(width: screen.width, height: screen.height * 0.6)
                     
@@ -146,9 +148,10 @@ struct FullScreenCardView: View {
             .background(
                 LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.2), Color.white]), startPoint: .top, endPoint: .bottom)
             )
+
         } //ScrollView
+        .padding(.top, 30)
         .edgesIgnoringSafeArea(.bottom)
-        .padding(.top, 20)
         
     } // ZSTACK
 }
@@ -157,4 +160,5 @@ struct FullScreenCardView: View {
     FullScreenCardView(person: Person.example, fullScreenMode: .constant(true))
         .environmentObject(UserManager())
         .environmentObject(AppStateManager())
+        .edgesIgnoringSafeArea(.all)
 }

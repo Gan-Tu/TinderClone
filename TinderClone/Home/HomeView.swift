@@ -13,6 +13,8 @@ struct HomeView: View {
 
     var body: some View {
         VStack {
+            Spacer()
+            
             CardStack(people: userManager.swipeQueue)
             
             Spacer()
@@ -63,6 +65,8 @@ struct HomeView: View {
                         // NOT IMPLEMENTED
                     }
                 }
+                
+                Spacer()
             }
             .frame(height: 50)
             .padding(.horizontal)

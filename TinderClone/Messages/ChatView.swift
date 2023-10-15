@@ -63,6 +63,9 @@ struct ChatView: View {
                         })
                     }
                 }
+                .onTapGesture {
+                    hideKeyboard()
+                }
                 
                 ZStack(alignment: .trailing) {
                     Color.textFieldBackground

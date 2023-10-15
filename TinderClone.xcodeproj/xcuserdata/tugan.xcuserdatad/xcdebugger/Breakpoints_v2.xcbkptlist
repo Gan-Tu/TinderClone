@@ -14,9 +14,9 @@
             filePath = "TinderClone/Home/CardViews/CardView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "CardView"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "InteractiveCardTestView"
             landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
