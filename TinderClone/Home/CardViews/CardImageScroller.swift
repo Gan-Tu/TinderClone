@@ -61,7 +61,8 @@ struct CardImageScroller: View {
                         }
                     }
                     .padding(.top, 10)
-                    .padding(.horizontal, fullScreenMode ? 0 : 12)
+                    // .padding(.horizontal, fullScreenMode ? 0 : 12)
+                    .padding(.horizontal, 12)
                     
                     Spacer()
                     
