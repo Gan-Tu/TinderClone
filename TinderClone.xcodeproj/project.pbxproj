@@ -11,6 +11,7 @@
 		591D07C02AACEBB20090AB39 /* MessagePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D07BF2AACEBB20090AB39 /* MessagePreviewView.swift */; };
 		59435FE82ADC8A6200C614F8 /* CardImageScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59435FE72ADC8A6200C614F8 /* CardImageScroller.swift */; };
 		59435FEC2ADC903500C614F8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59435FEB2ADC903500C614F8 /* CardView.swift */; };
+		59435FEE2ADC941800C614F8 /* FullScreenCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59435FED2ADC941800C614F8 /* FullScreenCardView.swift */; };
 		594475802AD32B79004C2D7E /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5944757F2AD32B79004C2D7E /* UserManager.swift */; };
 		594475822AD32BAA004C2D7E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594475812AD32BAA004C2D7E /* User.swift */; };
 		594475842AD32C80004C2D7E /* LikesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594475832AD32C80004C2D7E /* LikesView.swift */; };
@@ -18,6 +19,7 @@
 		594475892AD3355C004C2D7E /* TopPicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594475882AD3355C004C2D7E /* TopPicksView.swift */; };
 		5944758B2AD335E6004C2D7E /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5944758A2AD335E6004C2D7E /* MatchesView.swift */; };
 		594475922AD37450004C2D7E /* PurchasePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594475912AD37450004C2D7E /* PurchasePopup.swift */; };
+		59498AC72ADC97530044BD92 /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = 59498AC62ADC97530044BD92 /* LoremSwiftum */; };
 		599271A72AD3798200E7C270 /* PurchaseSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599271A62AD3798200E7C270 /* PurchaseSwipeView.swift */; };
 		599271A92AD37BD500E7C270 /* PurchaseOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599271A82AD37BD500E7C270 /* PurchaseOptionView.swift */; };
 		599271AB2AD37BFC00E7C270 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599271AA2AD37BFC00E7C270 /* Subscription.swift */; };
@@ -49,6 +51,7 @@
 		591D07BF2AACEBB20090AB39 /* MessagePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePreviewView.swift; sourceTree = "<group>"; };
 		59435FE72ADC8A6200C614F8 /* CardImageScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageScroller.swift; sourceTree = "<group>"; };
 		59435FEB2ADC903500C614F8 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		59435FED2ADC941800C614F8 /* FullScreenCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCardView.swift; sourceTree = "<group>"; };
 		5944757F2AD32B79004C2D7E /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		594475812AD32BAA004C2D7E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		594475832AD32C80004C2D7E /* LikesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesView.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59498AC72ADC97530044BD92 /* LoremSwiftum in Frameworks */,
 				59D2B39E2AA69CA7006551AA /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +103,7 @@
 			children = (
 				59435FE72ADC8A6200C614F8 /* CardImageScroller.swift */,
 				59435FEB2ADC903500C614F8 /* CardView.swift */,
+				59435FED2ADC941800C614F8 /* FullScreenCardView.swift */,
 			);
 			path = CardViews;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			name = TinderClone;
 			packageProductDependencies = (
 				59D2B39D2AA69CA7006551AA /* KingfisherSwiftUI */,
+				59498AC62ADC97530044BD92 /* LoremSwiftum */,
 			);
 			productName = TinderClone;
 			productReference = 59D2B37D2AA69289006551AA /* TinderClone.app */;
@@ -280,6 +286,7 @@
 			mainGroup = 59D2B3742AA69289006551AA;
 			packageReferences = (
 				59D2B39C2AA69CA7006551AA /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				59498AC52ADC97530044BD92 /* XCRemoteSwiftPackageReference "LoremSwiftum" */,
 			);
 			productRefGroup = 59D2B37E2AA69289006551AA /* Products */;
 			projectDirPath = "";
@@ -307,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59435FEE2ADC941800C614F8 /* FullScreenCardView.swift in Sources */,
 				59D2B3AF2AACB2B7006551AA /* ChatManager.swift in Sources */,
 				59A444E82AACBFA200D3BE82 /* MessageListView.swift in Sources */,
 				5944758B2AD335E6004C2D7E /* MatchesView.swift in Sources */,
@@ -560,6 +568,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		59498AC52ADC97530044BD92 /* XCRemoteSwiftPackageReference "LoremSwiftum" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lukaskubanek/LoremSwiftum";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		59D2B39C2AA69CA7006551AA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -571,6 +587,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		59498AC62ADC97530044BD92 /* LoremSwiftum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 59498AC52ADC97530044BD92 /* XCRemoteSwiftPackageReference "LoremSwiftum" */;
+			productName = LoremSwiftum;
+		};
 		59D2B39D2AA69CA7006551AA /* KingfisherSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 59D2B39C2AA69CA7006551AA /* XCRemoteSwiftPackageReference "Kingfisher" */;
