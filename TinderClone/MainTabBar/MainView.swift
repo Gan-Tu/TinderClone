@@ -9,12 +9,13 @@ import SwiftUI
 
 struct MainView: View {
     @EnvironmentObject var appState: AppStateManager
+    @EnvironmentObject var userManager: UserManager
     
     func correctViewForState() -> some View {
         // AnyView is used to help returned view to be same type
         switch appState.selectedTab {
         case .fire:
-            let view = Color.red
+            let view = HomeView()
             return AnyView(view)
         case .star:
             let view = MatchesView()
