@@ -20,6 +20,7 @@
 		5944758B2AD335E6004C2D7E /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5944758A2AD335E6004C2D7E /* MatchesView.swift */; };
 		594475922AD37450004C2D7E /* PurchasePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594475912AD37450004C2D7E /* PurchasePopup.swift */; };
 		59498AC72ADC97530044BD92 /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = 59498AC62ADC97530044BD92 /* LoremSwiftum */; };
+		59498AC92ADC9A280044BD92 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59498AC82ADC9A280044BD92 /* CircleButtonView.swift */; };
 		599271A72AD3798200E7C270 /* PurchaseSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599271A62AD3798200E7C270 /* PurchaseSwipeView.swift */; };
 		599271A92AD37BD500E7C270 /* PurchaseOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599271A82AD37BD500E7C270 /* PurchaseOptionView.swift */; };
 		599271AB2AD37BFC00E7C270 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599271AA2AD37BFC00E7C270 /* Subscription.swift */; };
@@ -59,6 +60,7 @@
 		594475882AD3355C004C2D7E /* TopPicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksView.swift; sourceTree = "<group>"; };
 		5944758A2AD335E6004C2D7E /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
 		594475912AD37450004C2D7E /* PurchasePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePopup.swift; sourceTree = "<group>"; };
+		59498AC82ADC9A280044BD92 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		599271A62AD3798200E7C270 /* PurchaseSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSwipeView.swift; sourceTree = "<group>"; };
 		599271A82AD37BD500E7C270 /* PurchaseOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseOptionView.swift; sourceTree = "<group>"; };
 		599271AA2AD37BFC00E7C270 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				59D2B39A2AA69C5A006551AA /* RoundedImage.swift */,
+				59498AC82ADC9A280044BD92 /* CircleButtonView.swift */,
 			);
 			path = HelperView;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				59D2B3AF2AACB2B7006551AA /* ChatManager.swift in Sources */,
 				59A444E82AACBFA200D3BE82 /* MessageListView.swift in Sources */,
 				5944758B2AD335E6004C2D7E /* MatchesView.swift in Sources */,
+				59498AC92ADC9A280044BD92 /* CircleButtonView.swift in Sources */,
 				59435FEC2ADC903500C614F8 /* CardView.swift in Sources */,
 				59D2B3912AA6951B006551AA /* TabBarButtonView.swift in Sources */,
 				59D2B39B2AA69C5A006551AA /* RoundedImage.swift in Sources */,

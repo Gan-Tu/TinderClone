@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import LoremSwiftum
 
 struct Person: Hashable, Identifiable {
     // use real userId in real life
@@ -22,7 +23,7 @@ extension Person {
     static let example = Person(
         name: "Alex",
         age: 33,
-        bio: "I am photographer and love dogs",
+        bio: "I am photographer and love dogs. \(Lorem.sentences(2))",
         imageURLS: [
             URL(string: "https://i.pravatar.cc/400?img=52")!,
             URL(string: "https://i.pravatar.cc/401")!,
@@ -38,7 +39,7 @@ extension Person {
     static let example2 = Person(
         name: "Jessica",
         age: 30,
-        bio: "I like to go to the beach",
+        bio: "I like to go to the beach. \(Lorem.sentences(2))",
         imageURLS: [
             URL(string: "https://i.pravatar.cc/400?img=49")!,
             URL(string: "https://i.pravatar.cc/401")!,
@@ -54,7 +55,7 @@ extension Person {
     static let example3 = Person(
         name: "Steven",
         age: 34,
-        bio: "Nerdy boy who looks for love",
+        bio: "Nerdy boy who looks for love. \(Lorem.sentences(2))",
         imageURLS: [
             URL(string: "https://i.pravatar.cc/400?img=53")!,
             URL(string: "https://i.pravatar.cc/401")!,
@@ -70,7 +71,7 @@ extension Person {
     static let example4 = Person(
         name: "Cove",
         age: 26,
-        bio: "Fashion Designer",
+        bio: "Fashion Designer. \(Lorem.sentences(2))",
         imageURLS: [
             URL(string: "https://i.pravatar.cc/400?img=36")!,
             URL(string: "https://i.pravatar.cc/401")!,
@@ -86,7 +87,7 @@ extension Person {
     static let example5 = Person(
         name: "Parker",
         age: 24,
-        bio: "I love playing basketball and soccer.",
+        bio: "I love playing basketball and soccer. \(Lorem.sentences(2))",
         imageURLS: [
             URL(string: "https://i.pravatar.cc/400?img=12")!,
             URL(string: "https://i.pravatar.cc/401")!,
@@ -102,7 +103,7 @@ extension Person {
     static let example6 = Person(
         name: "Melisa",
         age: 22,
-        bio: "Savage Girl on the app",
+        bio: "Savage Girl on the app. \(Lorem.sentences(2))",
         imageURLS: [
             URL(string: "https://i.pravatar.cc/400?img=43")!,
             URL(string: "https://i.pravatar.cc/401")!,
@@ -117,7 +118,7 @@ extension Person {
     static let example7 = Person(
         name: "Brent",
         age: 28,
-        bio: "Gym rat",
+        bio: "Gym rat. \(Lorem.sentences(2))",
         imageURLS: [
             URL(string: "https://i.pravatar.cc/400?img=14")!,
             URL(string: "https://i.pravatar.cc/401")!,

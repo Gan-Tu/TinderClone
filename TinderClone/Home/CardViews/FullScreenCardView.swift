@@ -6,13 +6,21 @@
 //
 
 import SwiftUI
-import LoremSwiftum
 
 struct FullScreenCardView: View {
+    @EnvironmentObject var userManager: UserManager
+    
     var person: Person
+    
     @Binding var fullScreenMode: Bool
     
     let screen = UIScreen.main.bounds
+    
+    func showActionSheet() {
+        let items: [Any] = ["What do you think about \(person.name)? \n"]
+        let av = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        UIApplication.shared.windows.first?.rootViewController?.present(av, animated: true, completion: nil)
+    }
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -57,7 +65,7 @@ struct FullScreenCardView: View {
                     Spacer().frame(height: 26)
                     
                     HStack {
-                        Text("\(person.bio). \(Lorem.sentences(2))")
+                        Text("\(person.bio)")
                             .font(.system(size:  18, weight: .medium))
                             .lineLimit(20)
                             .multilineTextAlignment(.leading)
@@ -72,7 +80,7 @@ struct FullScreenCardView: View {
                     
                     VStack(spacing: 24) {
                         Button(action: {
-                            // TODO
+                            showActionSheet()
                         }, label: {
                             VStack {
                                 Text("SHARE \(person.name.uppercased())'S PROFILE")
@@ -92,19 +100,52 @@ struct FullScreenCardView: View {
                                 .foregroundStyle(Color.black)
                                 .opacity(0.75)
                         })
-
+                        
                     } // VStack
                     
                     Spacer().frame(height: 100)
                     
                 } // VStack
             })
+            
+            
+            HStack(spacing: 20) {
+                Spacer()
+
+                CircleButtonView(type: .no, action: {
+                    fullScreenMode = false
+                    userManager.swipe(person, .nope)
+                })
+                .frame(height: 50)
+                
+                CircleButtonView(type: .star, action: {
+                    fullScreenMode = false
+                    userManager.superLike(person)
+                })
+                .frame(height: 50)
+                
+                CircleButtonView(type: .heart, action: {
+                    fullScreenMode = false
+                    userManager.swipe(person, .like)
+                })
+                .frame(height: 50)
+                
+                Spacer()
+            } // HSTACK
+            .padding(.top, 25)
+            .padding(.bottom, 45)
+            .edgesIgnoringSafeArea(.all)
+            .background(
+                LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.2), Color.white]), startPoint: .top, endPoint: .bottom)
+            )
         } //ScrollView
+        .edgesIgnoringSafeArea(.bottom)
+        .padding(.top, 20)
         
-        Text("Overlay")
     } // ZSTACK
 }
 
 #Preview {
     FullScreenCardView(person: Person.example, fullScreenMode: .constant(true))
+        .environmentObject(UserManager())
 }
