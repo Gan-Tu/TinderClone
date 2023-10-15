@@ -42,7 +42,7 @@ struct FullScreenCardView: View {
                         .padding([.top, .horizontal], 16)
                         
                         Button(action: {
-                            // TODO
+                            fullScreenMode = false
                         }, label: {
                             Image(systemName: "arrow.down.circle.fill")
                                 .font(.system(size: 42))

@@ -84,7 +84,7 @@ struct CardImageScroller: View {
                             Spacer()
                             
                             Button(action: {
-                                // TODO
+                                fullScreenMode = true
                             }, label: {
                                 Image(systemName: "info.circle.fill")
                                     .font(.system(size: 26, weight: .medium))

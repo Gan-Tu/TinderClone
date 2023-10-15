@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct CardView: View {
-    @State var person: Person   // @State ensures the changes to person is reflected
+    var person: Person
+
+    // Used for card mamipulation
+    @State var x: CGFloat = 0.0
+    @State var y: CGFloat = 0.0
+    @State var degree: Double = 0.0
     
     @Binding var fullScreenMode: Bool
     
@@ -17,22 +22,22 @@ struct CardView: View {
     var body: some View {
         GeometryReader { geo in
             if fullScreenMode {
-                Text("fullScreenMode")
+                FullScreenCardView(person: person, fullScreenMode: $fullScreenMode)
             } else {
                 CardImageScroller(person: person, fullScreenMode: $fullScreenMode)
                     .animation(.easeOut(duration: 0.2))
                     .frame(width: geo.size.width - 20, height: geo.size.height)
                     .padding(.leading, 10)
-                    .offset(x: person.x, y: person.y)
-                    .rotationEffect(.degrees(person.degree))
+                    .offset(x: x, y: y)
+                    .rotationEffect(.degrees(degree))
                     .gesture(
                         DragGesture()
                             .onChanged({ value in
                                 withAnimation(.easeOut(duration: 0.2)) {
-                                    person.x = value.translation.width
-                                    person.y = value.translation.height
+                                    x = value.translation.width
+                                    y = value.translation.height
                                     withAnimation(.easeOut(duration: 0.2)) {
-                                        person.degree = Double((value.translation.width/25))
+                                        degree = Double((value.translation.width/25))
                                     }
                                 }
                             })
@@ -41,17 +46,17 @@ struct CardView: View {
                                     let width = value.translation.width
                                     if abs(width) <= screenCutoff {
                                         // snap back
-                                        person.x = 0
-                                        person.y = 0
-                                        person.degree = 0
+                                        x = 0
+                                        y = 0
+                                        degree = 0
                                     }else if width > screenCutoff {
                                         // swipe right
-                                        person.x = 500
-                                        person.degree = 12
+                                        x = 500
+                                        degree = 12
                                     } else if width < -screenCutoff {
                                         // swipe left
-                                        person.x = -500
-                                        person.degree = -12
+                                        x = -500
+                                        degree = -12
                                     }
                                 }
                             })
@@ -61,10 +66,23 @@ struct CardView: View {
     }
 }
 
-#Preview("Full Screen") {
-    CardView(person: Person.example, fullScreenMode: .constant(true))
+
+struct InteractiveCardTestView: View {
+    @State var fullScreenMode = false
+
+    var body: some View {
+        CardView(person: Person.example, fullScreenMode: $fullScreenMode)
+    }
+}
+
+#Preview("Interactive View") {
+    InteractiveCardTestView()
 }
 
 #Preview("Normal View") {
     CardView(person: Person.example, fullScreenMode: .constant(false))
+}
+
+#Preview("Full Screen") {
+    CardView(person: Person.example, fullScreenMode: .constant(true))
 }
