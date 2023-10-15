@@ -30,7 +30,7 @@ struct CardView: View {
                     
                     VStack {
                         HStack {
-                            Image("nopeButton")
+                            Image("likeButton")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 150)
@@ -38,7 +38,7 @@ struct CardView: View {
                             
                             Spacer()
                             
-                            Image("likeButton")
+                            Image("nopeButton")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 150)
