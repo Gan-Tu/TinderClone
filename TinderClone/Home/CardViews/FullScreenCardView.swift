@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FullScreenCardView: View {
+    @EnvironmentObject var appState: AppStateManager
     @EnvironmentObject var userManager: UserManager
     
     var person: Person
@@ -121,8 +122,13 @@ struct FullScreenCardView: View {
                 .frame(height: 50)
                 
                 CircleButtonView(type: .star, action: {
-                    fullScreenMode = false
-                    userManager.superLike(person)
+                    if let person = userManager.swipeQueue.last {
+                        if userManager.currentUser.goldSubscriber {
+                            userManager.superLike(person)
+                        } else {
+                            appState.showPurchaseScreen()
+                        }
+                    }
                 })
                 .frame(height: 50)
                 
@@ -150,4 +156,5 @@ struct FullScreenCardView: View {
 #Preview {
     FullScreenCardView(person: Person.example, fullScreenMode: .constant(true))
         .environmentObject(UserManager())
+        .environmentObject(AppStateManager())
 }
