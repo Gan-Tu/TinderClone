@@ -10,6 +10,7 @@ import KingfisherSwiftUI
 
 struct CardImageScroller: View {
     var person: Person
+
     @Binding var fullScreenMode: Bool
     
     @State private var imageIndex = 0
@@ -37,7 +38,7 @@ struct CardImageScroller: View {
                         .onTapGesture(perform: {
                             swipeLeft();
                         })
-                    
+
                     HStack {
                         Rectangle()
                             .onTapGesture {
